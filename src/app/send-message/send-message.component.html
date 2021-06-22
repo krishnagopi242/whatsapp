@@ -1,13 +1,18 @@
-<div class="container">
-    <form #heroForm="ngForm">
-        <mat-form-field class="example-full-width">
-            <mat-label>Enter mobile number</mat-label>
-            <input type="number" required matInput placeholder="Enter your mobile number" [(ngModel)]="phoneNumber"
-                name="name" #name="ngModel">
-        </mat-form-field>
-        <div class="flex">
-            <a class="custom-btn link" [ngClass]="heroForm.valid ? '' : 'link-disable'"
-                href="https://api.whatsapp.com/send?phone={{phoneNumber}}">Send Message</a>
-        </div>
-    </form>
+<div class="container flex">
+    <mat-card>
+        <form #heroForm="ngForm">
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter mobile number</mat-label>
+                <input type="number" required matInput placeholder="Enter your mobile number" [(ngModel)]="phoneNumber"
+                    name="name" #name="ngModel">
+            </mat-form-field>
+            <div class="flex">
+                <a class="custom-btn link" [ngClass]="heroForm.valid ? '' : 'link-disable'"
+                    href="https://api.whatsapp.com/send?phone=91{{phoneNumber}}">Send Message</a>
+            </div>
+        </form>
+    </mat-card>
+</div>
+<div class="flex">
+    This application is used to send whatsapp messages without saving a contact.
 </div>
